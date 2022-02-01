@@ -1,11 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-
-
+    
     [SerializeField] private float speed = 3.0f;
 
 
@@ -25,7 +25,8 @@ public class CharacterMovement : MonoBehaviour
     void FixedUpdate()
     {
         // Players moves up 
-        if (Input.GetKey(KeyCode.W)) {
+        if (Input.GetKey(KeyCode.W))
+        {
             transform.position += Vector3.up * speed * Time.deltaTime;
         }
 
